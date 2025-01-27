@@ -11,7 +11,8 @@ for (const button of buttons) {
 function onClick(eventObject) {
   eventObject.preventDefault();
 
-  const buttonSrc = this.querySelector('.list-item__link').getAttribute('href');
+  const link = eventObject.currentTarget.querySelector('.list-item__link');
+  const buttonSrc = link.getAttribute('href');
 
   mainPicture.setAttribute('src', buttonSrc);
 }
